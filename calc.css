@@ -1,0 +1,50 @@
+table {
+  font-weight: bold;
+  font-style: italic;
+  width: 59%;
+  text-align: center;
+}
+.total_nssf_nhdf,
+.taxable_income {
+  color: white;
+}
+.calc_button {
+  background-color: rgb(241, 147, 55);
+  height: 30px;
+  width: 80px;
+  border-radius: 10px;
+}
+
+.container_div {
+    position: relative;
+  background-color: azure;
+  height: 500px;
+  width: 80%;
+}
+
+.basic_salary {
+  width: 80px;
+}
+
+.benefits {
+  width: 80px;
+}
+
+.tittle {
+  font-size: 35px;
+}
+
+.tittle_div{
+    position: absolute;
+}
+
+.input_div{
+position: absolute;
+top: 50%;
+}
+
+.table_div{
+    position: absolute;
+    top: 60%;
+    width: 100%;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="calc.css" />
+  </head>
+  <body>
+    <div class="container_div">
+      
+
+      <div class="tittle_div">
+        <img
+        src="https://www.payroll.ke/image/site/payroll-logo.png"
+        alt="Payroll Logo"
+      />
+        <p class="tittle">NET PAY CALCULATOR</p>
+        <p>
+          Enter the basic salary and benefits below to calculate the net salary
+        </p>
+        <p id="err_mes"></p>
+        <p id="suc_mes"></p>
+      </div>
+      <div id="input_form" class="input_div">
+        <label>Basic Salary:</label><button>Kes</button
+        ><input type="number" id="basic_salary"  class="basic_salary" /> <label>Benefits:</label
+        ><button>Kes</button><input type="number" id="benefits" class="benefits"/>
+        <button
+          onclick="getgross(); getnssf(); getnhdf(); getnhif(); getnssf_nhdf_total(); gettaxable_income(); getpayee(); getnet_salary(); check_input()"
+          class="calc_button"
+        >
+          Calculate
+        </button>
+      </div>
+      <div class="table_div">
+        <table border="1">
+          <th>Description</th>
+          <th>Results</th>
+          <tr>
+            <td>Gross Salary</td>
+            <td id="out_gross_salary"></td>
+          </tr>
+          <tr>
+            <td>NSSF</td>
+            <td id="out_nssf"></td>
+          </tr>
+          <tr>
+            <td>NHDF</td>
+            <td id="out_nhdf"></td>
+          </tr>
+          <tr>
+            <td>Final Payee</td>
+            <td id="out_payee"></td>
+          </tr>
+          <tr>
+            <td>NHIF</td>
+            <td id="out_nhif"></td>
+          </tr>
+          <tr>
+            <td>Net Pay</td>
+            <td id="out_net_pay"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div id="total_nssf_nhdf" class="total_nssf_nhdf"></div>
+    <div id="taxable_income" class="taxable_income"></div>
+    <script src="calc.js"></script>
+  </body>
+</html>
