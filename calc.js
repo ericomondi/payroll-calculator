@@ -1,15 +1,10 @@
-// var inp_basic_salary = document.getElementById("basic_salary");
-// var inp_benefits = document.getElementById("benefits");
-// var calc_gross_salary = document.getElementById("out_gross_salary");
+
 
 function findgross_salary(basic_salary, benefits) {
   gross_salary = basic_salary + benefits;
   return gross_salary;
 }
-// let calc_gross = findgross_salary(
-//   Number(prompt("Enter the basic salary")),
-//   Number(prompt("Enter benefits"))
-// );
+
 function getgross() {
   document.getElementById("out_gross_salary").innerText = findgross_salary(
     Number(document.getElementById("basic_salary").value),
@@ -39,12 +34,12 @@ function findnhdf(calcGross, nhdfRate = 0.03) {
 }
 
 function getnhdf() {
-  document.getElementById("out_nhdf").innerText = findnhdf(
+  document.getElementById("out_nhdf").innerText = (findnhdf(
     document.getElementById("out_gross_salary").value
-  );
+  )).toFixed(2);
 }
 
-// morning
+
 
 function find_nssf_nhdf_total(nssf, nhdf) {
   let total = nssf + nhdf;
@@ -91,9 +86,9 @@ function find_payee(taxable_income, personal_relief = 2400) {
 }
 
 function getpayee() {
-  document.getElementById("out_payee").innerText = find_payee(
+  document.getElementById("out_payee").innerText = (find_payee(
     document.getElementById("taxable_income").innerText
-  );
+  )).toFixed(2);
 }
 
 function findnhif(calcGross) {
@@ -149,38 +144,25 @@ function findnet_salary(gross_salary, nhif, nhdf, nssf_pay, netPayee) {
 }
 
 function getnet_salary() {
-  document.getElementById("out_net_pay").innerText = findnet_salary(
+  document.getElementById("out_net_pay").innerText = (findnet_salary(
     Number(document.getElementById("out_gross_salary").innerText),
     Number(document.getElementById("out_nhif").innerText),
     Number(document.getElementById("out_nhdf").innerText),
     Number(document.getElementById("out_nssf").innerText),
     Number(document.getElementById("out_payee").innerText)
-  );
+  )).toFixed(2);
 }
 
-// let user_input = document.getElementById("input_form");
-// user_input.addEventListener("submit", function (e) {
-//   e.preventDefault();
-//   let basic_salary = document.getElementById("basic_salry");
-//   let benefits = document.getElementById("benefits");
 
-//   if (basic_salary.value.length < 0 || benefits.value.lenght < 0) {
+
+// function check_input() {
+//   if (
+//     document.getElementById("basic_salry").value.length < 0 ||
+//     document.getElementById("benefits").value.lenght < 0
+//   ) {
 //     document.getElementById("err_mes").innerText =
-//     "Ensure all fields are eneterd";
+//       "Ensure all fields are eneterd";
 //   } else {
-//     document.getElementById("suc_mes").innerText =
-//       "View the net salary below";
+//     document.getElementById("suc_mes").innerText = "View the net salary below";
 //   }
-// });
-
-function check_input() {
-  if (
-    document.getElementById("basic_salry").value.length < 0 ||
-    document.getElementById("benefits").value.lenght < 0
-  ) {
-    document.getElementById("err_mes").innerText =
-      "Ensure all fields are eneterd";
-  } else {
-    document.getElementById("suc_mes").innerText = "View the net salary below";
-  }
-}
+// }

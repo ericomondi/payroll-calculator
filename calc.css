@@ -1,8 +1,9 @@
 table {
-  font-weight: bold;
-  font-style: italic;
+  font-weight: 400;
+  
   width: 59%;
   text-align: center;
+  border-collapse: collapse
 }
 .total_nssf_nhdf,
 .taxable_income {
@@ -13,13 +14,19 @@ table {
   height: 30px;
   width: 80px;
   border-radius: 10px;
+  border-color: rgb(241, 147, 55);
 }
 
 .container_div {
     position: relative;
+    display:flex;
   background-color: azure;
   height: 500px;
-  width: 80%;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  /* align-items: center; */
 }
 
 .basic_salary {
@@ -36,15 +43,26 @@ table {
 
 .tittle_div{
     position: absolute;
+    width: 50vw;
 }
 
 .input_div{
 position: absolute;
 top: 50%;
+width: 50vw;
 }
 
 .table_div{
     position: absolute;
     top: 60%;
-    width: 100%;
+    width: 50vw;
+    left: 32%;
+}
+
+label{
+  font-weight: 900;
+}
+
+.description{
+  font-weight: bolder;
 }

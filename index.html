@@ -3,20 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Payroll-Calculator</title>
     <link rel="stylesheet" href="calc.css" />
+    <link rel="icon" type="image/x-icon" href="images-icons/Payroll_calculator.png">
   </head>
   <body>
     <div class="container_div">
-      
-
       <div class="tittle_div">
         <img
-        src="https://www.payroll.ke/image/site/payroll-logo.png"
-        alt="Payroll Logo"
-      />
+          src="https://www.payroll.ke/image/site/payroll-logo.png"
+          alt="Payroll Logo"
+        />
         <p class="tittle">NET PAY CALCULATOR</p>
-        <p>
+        <p class="description">
           Enter the basic salary and benefits below to calculate the net salary
         </p>
         <p id="err_mes"></p>
@@ -24,8 +23,9 @@
       </div>
       <div id="input_form" class="input_div">
         <label>Basic Salary:</label><button>Kes</button
-        ><input type="number" id="basic_salary"  class="basic_salary" /> <label>Benefits:</label
-        ><button>Kes</button><input type="number" id="benefits" class="benefits"/>
+        ><input type="number" id="basic_salary" class="basic_salary" />
+        <label>Benefits:</label><button>Kes</button
+        ><input type="number" id="benefits" class="benefits" />
         <button
           onclick="getgross(); getnssf(); getnhdf(); getnhif(); getnssf_nhdf_total(); gettaxable_income(); getpayee(); getnet_salary(); check_input()"
           class="calc_button"
