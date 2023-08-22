@@ -6,10 +6,10 @@ function findgross_salary(basic_salary, benefits) {
 }
 
 function getgross() {
-  document.getElementById("out_gross_salary").innerText = findgross_salary(
+  document.getElementById("out_gross_salary").innerText = (findgross_salary(
     Number(document.getElementById("basic_salary").value),
     Number(document.getElementById("benefits").value)
-  );
+  )).toFixed(2);
 }
 
 function findnssf(calc_gross, nssf_rate = 0.06) {
@@ -23,9 +23,9 @@ function findnssf(calc_gross, nssf_rate = 0.06) {
 }
 
 function getnssf() {
-  document.getElementById("out_nssf").innerText = findnssf(
+  document.getElementById("out_nssf").innerText = (findnssf(
     document.getElementById("out_gross_salary").value
-  );
+  )).toFixed(2);
 }
 
 function findnhdf(calcGross, nhdfRate = 0.03) {
@@ -47,10 +47,10 @@ function find_nssf_nhdf_total(nssf, nhdf) {
 }
 
 function getnssf_nhdf_total() {
-  document.getElementById("total_nssf_nhdf").innerText = find_nssf_nhdf_total(
+  document.getElementById("total_nssf_nhdf").innerText = (find_nssf_nhdf_total(
     Number(document.getElementById("out_nssf").innerText),
     Number(document.getElementById("out_nhdf").innerText)
-  );
+  )).toFixed(2);
 }
 
 function findtaxable_income(gross_salary, total_nssf_nhdf) {
@@ -59,10 +59,10 @@ function findtaxable_income(gross_salary, total_nssf_nhdf) {
 }
 
 function gettaxable_income() {
-  document.getElementById("taxable_income").innerText = findtaxable_income(
+  document.getElementById("taxable_income").innerText = (findtaxable_income(
     document.getElementById("out_gross_salary").innerText,
     document.getElementById("total_nssf_nhdf").innerText
-  );
+  )).toFixed(2);
 }
 
 function find_payee(taxable_income, personal_relief = 2400) {
@@ -132,9 +132,9 @@ function findnhif(calcGross) {
 }
 
 function getnhif() {
-  document.getElementById("out_nhif").innerText = findnhif(
+  document.getElementById("out_nhif").innerText = (findnhif(
     document.getElementById("out_gross_salary").value
-  );
+  )).toFixed(2);
 }
 
 function findnet_salary(gross_salary, nhif, nhdf, nssf_pay, netPayee) {
