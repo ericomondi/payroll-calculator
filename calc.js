@@ -1,45 +1,45 @@
+
+
 function findgross_salary(basic_salary, benefits) {
   gross_salary = basic_salary + benefits;
   return gross_salary;
 }
 
 function getgross() {
-  document.getElementById("out_gross_salary").innerText = findgross_salary(
+  document.getElementById("out_gross_salary").innerText = (findgross_salary(
     Number(document.getElementById("basic_salary").value),
     Number(document.getElementById("benefits").value)
-  ).toFixed(2);
+  )).toFixed(2);
 }
 
-function findnssf(gross_salary, nssf_rate = 0.06) {
-  if (gross_salary <= 18000) {
-    nssf_pay = gross_salary * nssf_rate;
+function findnssf(calc_gross, nssf_rate = 0.06) {
+  nssf_pay = gross_salary * nssf_rate;
+  if (nssf_pay >= 0 && nssf_pay <= 18000) {
+    nssf_pay = gross_salary * 0.06;
   } else {
-    nssf_pay = 18000 * 0.06;
+    nssf_pay = 18000;
   }
-
   return nssf_pay;
 }
 
 function getnssf() {
-  document.getElementById("out_nssf").innerText = findnssf(
+  document.getElementById("out_nssf").innerText = (findnssf(
     document.getElementById("out_gross_salary").value
-  ).toFixed(2);
+  )).toFixed(2);
 }
 
-function findnhdf(gross_salary, nhdfRate = 0.03) {
-  if (gross <= 83334) {
-    nhdf = gross * nhdf_rate;
-  } else {
-    nhdf = 2500;
-  }
+function findnhdf(calcGross, nhdfRate = 0.03) {
+  let nhdf = gross_salary * nhdfRate;
   return nhdf;
 }
 
 function getnhdf() {
-  document.getElementById("out_nhdf").innerText = findnhdf(
+  document.getElementById("out_nhdf").innerText = (findnhdf(
     document.getElementById("out_gross_salary").value
-  ).toFixed(2);
+  )).toFixed(2);
 }
+
+
 
 function find_nssf_nhdf_total(nssf, nhdf) {
   let total = nssf + nhdf;
@@ -47,10 +47,10 @@ function find_nssf_nhdf_total(nssf, nhdf) {
 }
 
 function getnssf_nhdf_total() {
-  document.getElementById("total_nssf_nhdf").innerText = find_nssf_nhdf_total(
+  document.getElementById("total_nssf_nhdf").innerText = (find_nssf_nhdf_total(
     Number(document.getElementById("out_nssf").innerText),
     Number(document.getElementById("out_nhdf").innerText)
-  ).toFixed(2);
+  )).toFixed(2);
 }
 
 function findtaxable_income(gross_salary, total_nssf_nhdf) {
@@ -59,42 +59,42 @@ function findtaxable_income(gross_salary, total_nssf_nhdf) {
 }
 
 function gettaxable_income() {
-  document.getElementById("taxable_income").innerText = findtaxable_income(
+  document.getElementById("taxable_income").innerText = (findtaxable_income(
     document.getElementById("out_gross_salary").innerText,
     document.getElementById("total_nssf_nhdf").innerText
-  ).toFixed(2);
+  )).toFixed(2);
 }
 
 function find_payee(taxable_income, personal_relief = 2400) {
+  netpayee = 0;
   if (taxable_income <= 24000) {
     grosspayee = 24000 * 0.1;
     netpayee = grosspayee - personal_relief;
-  } else if (taxable_income <= 32333) {
+  } else if ((taxable_income <= 32, 333)) {
     grosspayee = (taxable_income - 24000) * 0.25 + 2400;
     netpayee = grosspayee - personal_relief;
   } else if (taxable_income <= 500000) {
     grosspayee = (taxable_income - 32333) * 0.3 + 4483.25;
     netpayee = grosspayee - personal_relief;
-  } else if (taxable_income <= 800000) {
-    grosspayee = (taxable_income - 500000) * 0.325 + 144783.35 + 2400;
+  } else if (taxable_income > 500000) {
+    grosspayee = (taxable_income - 80000) * 0.35 + 4483.25;
     netpayee = grosspayee - personal_relief;
   } else {
-    grosspayee = (taxable_income - 800000) * 0.35 + 242283.35 + 2400;
-    netpayee = grosspayee - personal_relief;
+    netpayee = 0;
   }
   return netpayee;
 }
 
 function getpayee() {
-  document.getElementById("out_payee").innerText = find_payee(
+  document.getElementById("out_payee").innerText = (find_payee(
     document.getElementById("taxable_income").innerText
-  ).toFixed(2);
+  )).toFixed(2);
 }
 
 function findnhif(calcGross) {
   if (gross_salary === 0) {
-    nhif = 0;
-  } else if (gross_salary <= 5999) {
+    nhif = 500;
+  } else if (gross_salary == 5999) {
     nhif = 150;
   } else if (gross_salary >= 6000 && gross_salary <= 7999) {
     nhif = 300;
@@ -132,9 +132,9 @@ function findnhif(calcGross) {
 }
 
 function getnhif() {
-  document.getElementById("out_nhif").innerText = findnhif(
+  document.getElementById("out_nhif").innerText = (findnhif(
     document.getElementById("out_gross_salary").value
-  ).toFixed(2);
+  )).toFixed(2);
 }
 
 function findnet_salary(gross_salary, nhif, nhdf, nssf_pay, netPayee) {
@@ -144,14 +144,16 @@ function findnet_salary(gross_salary, nhif, nhdf, nssf_pay, netPayee) {
 }
 
 function getnet_salary() {
-  document.getElementById("out_net_pay").innerText = findnet_salary(
+  document.getElementById("out_net_pay").innerText = (findnet_salary(
     Number(document.getElementById("out_gross_salary").innerText),
     Number(document.getElementById("out_nhif").innerText),
     Number(document.getElementById("out_nhdf").innerText),
     Number(document.getElementById("out_nssf").innerText),
     Number(document.getElementById("out_payee").innerText)
-  ).toFixed(2);
+  )).toFixed(2);
 }
+
+
 
 // function check_input() {
 //   if (
