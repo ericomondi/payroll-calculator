@@ -21,7 +21,7 @@ table {
     position: relative;
     display:flex;
   background-color: azure;
-  height: 500px;
+  height: 600px;
   width: 100%;
   justify-content: center;
   flex-wrap: wrap;
