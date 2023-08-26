@@ -171,13 +171,19 @@ function calculations() {
   findnet_salary();
   getnet_salary();
 }
-
 function check_input() {
   if (
     document.getElementById("basic_salary").value.length > 0 ||
     document.getElementById("benefits").value.length > 0
   ) {
-    calculations();
+    if (
+      document.getElementById("basic_salary").value < 0 ||
+      document.getElementById("benefits").value < 0
+    ) {
+      alert("Input can't be a negative no");
+    } else {
+      calculations();
+    }
   } else {
     alert("Input can't be empty");
   }

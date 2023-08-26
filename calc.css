@@ -39,6 +39,7 @@ table {
 
 .tittle {
   font-size: 35px;
+  margin-bottom: 1px;
 }
 
 .tittle_div{
@@ -50,11 +51,12 @@ table {
 position: absolute;
 top: 50%;
 width: 50vw;
+margin-top: -65px;
 }
 
 .table_div{
     position: absolute;
-    top: 60%;
+    top: 47%;
     width: 50vw;
     left: 32%;
 }
@@ -65,4 +67,5 @@ label{
 
 .description{
   font-weight: bolder;
+  
 }
