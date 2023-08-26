@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Payroll-Calculator</title>
     <link rel="stylesheet" href="calc.css" />
-    <link rel="icon" type="image/x-icon" href="images-icons/Payroll_calculator.png">
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="images-icons/Payroll_calculator.png"
+    />
   </head>
   <body>
     <div class="container_div">
@@ -26,12 +30,7 @@
         ><input type="number" id="basic_salary" class="basic_salary" />
         <label>Benefits:</label><button>Kes</button
         ><input type="number" id="benefits" class="benefits" />
-        <button
-          onclick="getgross(); getnssf(); getnhdf(); getnhif(); getnssf_nhdf_total(); gettaxable_income(); getpayee(); getnet_salary(); "
-          class="calc_button"
-        >
-          Calculate
-        </button>
+        <button onclick="check_input()" class="calc_button">Calculate</button>
       </div>
       <div class="table_div">
         <table border="1">
