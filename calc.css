@@ -133,7 +133,7 @@ label {
 
 /* Responsiveness */
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .container_div {
     position: relative;
     /* flex-direction: column;
@@ -141,7 +141,7 @@ label {
   }
   .input_div {
     top: 43%;
-    left: 0%;
+    left: 4%;
   }
   .table_div {
     top: 53%;
