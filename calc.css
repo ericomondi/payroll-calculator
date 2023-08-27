@@ -133,11 +133,12 @@ label {
 
 /* Responsiveness */
 
-@media (max-width: 1000px) {
+@media (max-width: 495px) and (min-width: 200px) {
   .container_div {
     position: relative;
     /* flex-direction: column;
       justify-content: space-around; */
+    height: 900px;
   }
   .input_div {
     top: 43%;
@@ -146,6 +147,7 @@ label {
   .table_div {
     top: 57%;
     left: 12%;
+    background-color: blue;
   }
   img {
     width: 100px;
@@ -170,8 +172,98 @@ label {
     margin-top: 12px;
     margin-left: 80px;
   }
-  .copyright_div{
+  .copyright_div {
     position: absolute;
     bottom: -4%;
+  }
+  .fa-linkedin,
+  .fa-github,
+  .fa-twitter {
+    width: 10px;
+    height: 10px;
+  }
+  .fa-twitter {
+    margin-right: 30px;
+  }
+}
+@media (min-width: 565px) and (max-width: 762px) {
+  .container_div {
+    position: relative;
+    height: 1000px;
+  }
+  img {
+    width: 220px;
+    height: 150px;
+  }
+  .input_div {
+    top: 40%;
+  }
+  .basic_salary {
+    margin-right: 60px;
+    margin-bottom: 20px;
+  }
+  .ben_label {
+    margin-left: 27px;
+  }
+  .calc_button {
+    margin-top: 20px;
+    margin-left: 125px;
+  }
+
+  table {
+    height: 300px;
+    width: 300px;
+  }
+  .table_div {
+    left: 22%;
+    background-color: green;
+  }
+}
+
+@media (max-width: 1000px) and (min-width: 805px) {
+  .container_div {
+    position: relative;
+    /* flex-direction: column;
+      justify-content: space-around; */
+    height: 1180px;
+  }
+  img {
+    width: 250px;
+    height: 150px;
+    margin-top: -150px;
+  }
+  .tittle_div {
+    top: 20%;
+  }
+  .input_div {
+    top: 40%;
+  }
+  .basic_salary {
+    margin-right: 180px;
+  }
+  .benefits {
+    margin-right: 180px;
+    margin-top: 20px;
+    /* margin-left: 30px; */
+  }
+
+  .calc_button {
+    margin-top: 20px;
+    margin-left: 120px;
+  }
+
+  .ben_label {
+    margin-left: 27px;
+  }
+  .table_div {
+    width: 100%;
+    left: 22%;
+    background-color: red;
+  }
+  table {
+    height: 300px;
+  }
+  .icons_div {
+    right: 4%;
   }
 }
