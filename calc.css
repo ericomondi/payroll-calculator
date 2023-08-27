@@ -140,11 +140,11 @@ label {
       justify-content: space-around; */
   }
   .input_div {
-    top: 50%;
+    top: 43%;
     left: 8%;
   }
   .table_div {
-    top: 64%;
+    top: 57%;
     left: 12%;
   }
   img {
@@ -169,5 +169,9 @@ label {
   .calc_button {
     margin-top: 12px;
     margin-left: 80px;
+  }
+  .copyright_div{
+    position: absolute;
+    bottom: -4%;
   }
 }
