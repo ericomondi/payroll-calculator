@@ -73,10 +73,21 @@ label {
   display: flex;
   justify-content: space-between;
   top: 2%;
-  color: red;
-  right: 5%;
+
+  right: 1%;
 }
 
+.fa-linkedin {
+  margin-left: 18px;
+  margin-right: 18px;
+  color: rgb(34, 156, 215);
+}
+.fa-twitter {
+  color: rgb(34, 156, 215);
+}
+.fa-github {
+  color: rgb(34, 156, 215);
+}
 @media screen {
 }
 
