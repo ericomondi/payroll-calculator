@@ -141,10 +141,10 @@ label {
   }
   .input_div {
     top: 43%;
-    left: 8%;
+    left: 0%;
   }
   .table_div {
-    top: 57%;
+    top: 53%;
     left: 12%;
   }
   img {
@@ -158,12 +158,16 @@ label {
     top: 0%;
   }
   .basic_salary {
-    margin-left: 89px;
+    margin-left: -0px;
     margin-top: 5px;
+    margin-right: -30px;
   }
   .benefits {
-    margin-left: 82px;
+    margin-left: -8px;
     margin-top: 5px;
+  }
+  .butns_desc{
+    margin-right: -10px;
   }
 
   .calc_button {
