@@ -10,6 +10,13 @@
       type="image/x-icon"
       href="images-icons/Payroll_calculator.png"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <div class="container_div">
@@ -22,16 +29,18 @@
         <p class="description">
           Enter the basic salary and benefits below to calculate the net salary
         </p>
-        <p id="err_mes"></p>
-        <p id="suc_mes"></p>
+       
       </div>
       <div id="input_form" class="input_div">
-        <label>Basic Salary:</label><button>Kes</button
+        <label class="sal_label">Basic Salary:</label><button class="butns_desc">Kes</button
         ><input type="number" id="basic_salary" class="basic_salary" />
-        <label>Benefits:</label><button>Kes</button
+        <label class="ben_label">Benefits:</label><button class="butnb_desc">Kes</button
         ><input type="number" id="benefits" class="benefits" />
         <button onclick="check_input()" class="calc_button">Calculate</button>
+
       </div>
+
+    
       <div class="table_div">
         <table border="1">
           <th>Description</th>
@@ -66,10 +75,36 @@
           </tr>
         </table>
       </div>
+
+      <div class="icons_div">
+        <a
+          href="https://github.com/Eric-Omondi/mywebsite.git"
+          target="_blank"
+          title="GitHub"
+        >
+          <i class="fa-brands fa-github fa-2xl"></i>
+        </a>
+        <a
+          class="linkedin-icon"
+          href="https://www.linkedin.com/in/youngt-cro-81b99622b/"
+          target="_blank"
+          title="LinkedIn"
+        >
+          <i class="fa-brands fa-linkedin fa-2xl"></i>
+        </a>
+        <a
+          href="https://twitter.com/its_young_t_"
+          target="_blank"
+          title="Twitter"
+        >
+          <i class="fa-brands fa-twitter fa-2xl"></i>
+        </a>
+      </div>
     </div>
 
+
     <div id="total_nssf_nhdf" class="total_nssf_nhdf"></div>
-    <!-- <div  class="taxable_income"></div> -->
+   
     <script src="calc.js"></script>
   </body>
 </html>

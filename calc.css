@@ -1,9 +1,9 @@
 table {
   font-weight: 400;
-  
+
   width: 59%;
   text-align: center;
-  border-collapse: collapse
+  border-collapse: collapse;
 }
 .total_nssf_nhdf,
 .taxable_income {
@@ -18,8 +18,8 @@ table {
 }
 
 .container_div {
-    position: relative;
-    display:flex;
+  position: relative;
+  display: flex;
   background-color: azure;
   height: 600px;
   width: 100%;
@@ -42,30 +42,79 @@ table {
   margin-bottom: 1px;
 }
 
-.tittle_div{
-    position: absolute;
-    width: 50vw;
+.tittle_div {
+  position: absolute;
+  width: 50vw;
 }
 
-.input_div{
-position: absolute;
-top: 50%;
-width: 50vw;
-margin-top: -65px;
+.input_div {
+  position: absolute;
+  top: 50%;
+  width: 50vw;
+  margin-top: -65px;
 }
 
-.table_div{
-    position: absolute;
-    top: 47%;
-    width: 50vw;
-    left: 32%;
+.table_div {
+  position: absolute;
+  top: 47%;
+  width: 50vw;
+  left: 32%;
 }
 
-label{
+label {
   font-weight: 900;
 }
 
-.description{
+.description {
   font-weight: bolder;
-  
+}
+.icons_div {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 2%;
+  color: red;
+  right: 5%;
+}
+
+@media screen {
+}
+
+@media (max-width: 890px) {
+  .container_div {
+    position: relative;
+    /* flex-direction: column;
+      justify-content: space-around; */
+  }
+  .input_div {
+    top: 50%;
+    left: 8%;
+  }
+  .table_div {
+    top: 64%;
+    left: 12%;
+  }
+  img {
+    width: 100px;
+    height: 30px;
+    margin-top: -100px;
+    margin-bottom: -23px;
+  }
+  .tittle_div {
+    left: 4%;
+    top: 0%;
+  }
+  .basic_salary {
+    margin-left: 89px;
+    margin-top: 5px;
+  }
+  .benefits {
+    margin-left: 82px;
+    margin-top: 5px;
+  }
+
+  .calc_button {
+    margin-top: 12px;
+    margin-left: 80px;
+  }
 }
