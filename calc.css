@@ -186,6 +186,9 @@ label {
     margin-right: 30px;
   }
 }
+@media screen {
+  
+}
 @media (min-width: 565px) and (max-width: 762px) {
   .container_div {
     position: relative;
