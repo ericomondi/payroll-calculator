@@ -29,18 +29,17 @@
         <p class="description">
           Enter the basic salary and benefits below to calculate the net salary
         </p>
-       
       </div>
       <div id="input_form" class="input_div">
-        <label class="sal_label">Basic Salary:</label><button class="butns_desc">Kes</button
+        <label class="sal_label">Basic Salary:</label
+        ><button class="butns_desc">Kes</button
         ><input type="number" id="basic_salary" class="basic_salary" />
-        <label class="ben_label">Benefits:</label><button class="butnb_desc">Kes</button
+        <label class="ben_label">Benefits:</label
+        ><button class="butnb_desc">Kes</button
         ><input type="number" id="benefits" class="benefits" />
         <button onclick="check_input()" class="calc_button">Calculate</button>
-
       </div>
 
-    
       <div class="table_div">
         <table border="1">
           <th>Description</th>
@@ -56,6 +55,10 @@
           <tr>
             <td>NHDF</td>
             <td id="out_nhdf"></td>
+          </tr>
+          <tr>
+            <td class="total_td"></td>
+            <td class="total_td" id="total_nssf_nhdf"></td>
           </tr>
           <tr>
             <td>Taxable Income</td>
@@ -78,7 +81,7 @@
 
       <div class="icons_div">
         <a
-          href="https://github.com/Eric-Omondi/Payroll-Calculator.git"
+          href="https://github.com/ericomondi/payroll-calculator.git"
           target="_blank"
           title="GitHub"
         >
@@ -100,11 +103,13 @@
           <i class="fa-brands fa-twitter fa-2xl"></i>
         </a>
       </div>
+
+      <div class="copyright_div">
+       Copyright&nbsp; <i class="fa-regular fa-copyright" style="color: #251f51"></i>&nbsp;2023 eric-omondi
+      </div>
     </div>
 
-
-    <div id="total_nssf_nhdf" class="total_nssf_nhdf"></div>
-   
+    <!-- <div id="total_nssf_nhdf" class="total_nssf_nhdf"></div> -->
     <script src="calc.js"></script>
   </body>
 </html>
