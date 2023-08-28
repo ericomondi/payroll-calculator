@@ -133,7 +133,7 @@ label {
 
 /* Responsiveness */
 
-@media (max-width: 495px) and (min-width: 200px) {
+@media (min-width: 200px) and (max-width: 495px) {
   .container_div {
     position: relative;
     /* flex-direction: column;
@@ -141,23 +141,26 @@ label {
     height: 900px;
   }
   .input_div {
-    top: 43%;
-    left: 8%;
+    top: 35%;
+    left: 14%;
   }
   .table_div {
-    top: 57%;
-    left: 12%;
-    background-color: blue;
+    top: 48%;
+    left: 16%;
+    /* background-color: blue; */
+  }
+  table {
+    width: 200px;
   }
   img {
-    width: 100px;
-    height: 30px;
+    width: 200px;
+    height: 100px;
     margin-top: -100px;
     margin-bottom: -23px;
   }
   .tittle_div {
-    left: 4%;
-    top: 0%;
+    left: 10%;
+    top: 5%;
   }
   .basic_salary {
     margin-left: 89px;
@@ -186,8 +189,40 @@ label {
     margin-right: 30px;
   }
 }
-@media screen {
-  
+@media (min-width: 495.1px) and (max-width: 564.9px) {
+  .container_div {
+    position: relative;
+    height: 780px;
+  }
+  img {
+    width: 200px;
+    /* height: 100px; */
+  }
+  .input_div {
+    position: absolute;
+    top: 45%;
+  }
+  .basic_salary {
+    margin-bottom: 20px;
+  }
+  .benefits {
+    margin-bottom: 20px;
+  }
+  .ben_label {
+    margin-left: 27px;
+  }
+  .calc_button {
+    margin-left: 130px;
+  }
+  .table_div {
+    position: absolute;
+    top: 55%;
+    /* background-color: pink; */
+    left: 25%;
+  }
+  table {
+    width: 250px;
+  }
 }
 @media (min-width: 565px) and (max-width: 762px) {
   .container_div {
@@ -219,11 +254,42 @@ label {
   }
   .table_div {
     left: 22%;
-    background-color: green;
+    /* background-color: green; */
   }
 }
 
-@media (max-width: 1000px) and (min-width: 805px) {
+@media (min-width: 761.9px) and (max-width: 804.9px) {
+  .container_div {
+    height: 1030px;
+  }
+  .tittle_div {
+    top: 9%;
+  }
+  .input_div {
+    top: 40%;
+    left: 28%;
+  }
+  .basic_salary {
+    margin-right: 90px;
+  }
+  .ben_label {
+    margin-left: 28px;
+  }
+  .benefits {
+    margin-top: 20px;
+    margin-right: 90px;
+    margin-bottom: 20px;
+  }
+  .calc_button {
+    margin-left: 125px;
+  }
+  .table_div {
+    top: 50%;
+    left: 29%;
+  }
+}
+
+@media (min-width: 805px) and (max-width: 1000px) {
   .container_div {
     position: relative;
     /* flex-direction: column;
@@ -261,7 +327,7 @@ label {
   .table_div {
     width: 100%;
     left: 22%;
-    background-color: red;
+    /* background-color: red; */
   }
   table {
     height: 300px;
