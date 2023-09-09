@@ -77,10 +77,10 @@ function find_payee(taxable_income, personal_relief = 2400) {
     grosspayee = (taxable_income - 32333) * 0.3 + 4483.25;
     netpayee = grosspayee - personal_relief;
   } else if (taxable_income <= 800000) {
-    grosspayee = (taxable_income - 500000) * 0.325 + 144783.35 + 2400;
+    grosspayee = (taxable_income - 500000) * 0.325 + 144783.35;
     netpayee = grosspayee - personal_relief;
   } else {
-    grosspayee = (taxable_income - 800000) * 0.35 + 242283.35 + 2400;
+    grosspayee = (taxable_income - 800000) * 0.35 + 242283.35;
     netpayee = grosspayee - personal_relief;
   }
   return netpayee;
