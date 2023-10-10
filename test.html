@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payroll-Calculator</title>
+    <!-- Include Bootstrap CSS and JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.min.js"></script>
+    <!-- Your existing styles and scripts -->
+    <link rel="stylesheet" href="calc.css">
+    <link rel="icon" type="image/x-icon" href="images-icons/Payroll_calculator.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header Section -->
+      <div class="row">
+        <div class="col-md-6">
+          <img src="https://www.payroll.ke/image/site/payroll-logo.png" alt="Payroll Logo">
+        </div>
+        <div class="col-md-6">
+          <h1 class="text-center">NET PAY CALCULATOR</h1>
+          <p class="text-center">Enter the basic salary and benefits below to calculate the net salary</p>
+        </div>
+      </div>
+
+      <!-- Input Form Section -->
+      <div class="row">
+        <div class="col-md-6">
+          <label class="sal_label">Basic Salary:</label>
+          <div class="input-group">
+            <span class="input-group-text">Kes</span>
+            <input type="number" id="basic_salary" class="form-control">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label class="ben_label">Benefits:</label>
+          <div class="input-group">
+            <span class="input-group-text">Kes</span>
+            <input type="number" id="benefits" class="form-control">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <button onclick="check_input()" class="btn btn-primary">Calculate</button>
+        </div>
+      </div>
+
+      <!-- Table Section -->
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Description</th>
+                <th>Results</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Table rows go here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Icons and Copyright Section -->
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <a href="https://github.com/ericomondi/payroll-calculator.git" target="_blank" title="GitHub">
+            <i class="fab fa-github fa-2x"></i>
+          </a>
+          <a class="linkedin-icon" href="https://www.linkedin.com/in/youngt-cro-81b99622b/" target="_blank" title="LinkedIn">
+            <i class="fab fa-linkedin fa-2x"></i>
+          </a>
+          <a href="https://twitter.com/its_young_t_" target="_blank" title="Twitter">
+            <i class="fab fa-twitter fa-2x"></i>
+          </a>
+        </div>
+        <div class="col-md-12 text-center">
+          <p class="copyright">Copyright &copy; <span id="year">2023</span> e-omondi</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="calc.js"></script>
+  </body>
+</html>
